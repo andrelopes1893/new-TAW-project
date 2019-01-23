@@ -47,8 +47,15 @@
 	  <article width="100%" align=" center">
       <table border="1px solid black" width="65%" height ="60%" align="center" style="margin-top: 70px">
               <tr>
-                <td rowspan="2" width= "65%"> 
-
+                <td rowspan="2" width= "65%" align="center"> 
+                    <form name="carinho" action="index.html" method="GET" >
+                      <input type="text" name="nome" placeholder="Nome..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
+                      <input type="text" name="email" placeholder="Email..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
+                      <input type="text" name="tele" placeholder="Telemóvel..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
+                      <input type="text" name="morada" placeholder="Morada..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
+                      <input type="text" name="postal" placeholder="Codigo Postal..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
+                      <input type="submit" name="sub" value="Finalizar Compra" onsubmit="return block();">
+                    </form>
                 </td>
                 <td>
                   <img src="imagens/IPP.jpg" width="250px" height="200px" class="center">
@@ -69,7 +76,10 @@
             function FVinhos() {
               document.getElementById("Vinhos").classList.toggle("showVinhos");
             }
-            
+            function block(){
+                return false;
+                window.open("file:///E:/Taw/new-TAW-project/index.html","_self")
+            }
              
             window.onclick = function(event) {
               if (!event.target.matches('.dropbtnVinhos')) {
