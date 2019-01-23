@@ -1,0 +1,81 @@
+
+<html>
+	<head>
+        <html>
+		<title>Cave dos Programadores</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+	<header>
+	  <table border="1px solid black" width="100%" height = "100%">
+			<tr>
+				<td rowspan="2" width= "18%" style="padding-right: 30px" align="left" >
+					<img src="imagens/logo2.jpg" href="index.html" width="110px" height="150px">
+				</td>
+				<td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
+					<h1> Adega dos Programadores</h1>
+				</td>
+
+				<td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
+					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
+        </td>
+        <td>
+					<input type="button" name="branco" onclick="location.href='brancos.html';" value="Brancos">
+        </td>
+        <td>
+					<input type="button" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
+        </td>
+        <td>
+					<input type="button" name="outro" onclick="location.href='outros.html';" value="Outros">
+        </td>
+        <td>
+					<input type="button" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
+        </td>
+			</tr>
+			
+		</table>
+	</header>
+
+	<section>
+	 
+	  <article width="100%" align=" center">
+    
+      <p align="center">
+        <img src="imagens/caves.jpg" width="501px" height="333px">
+      </p>
+		  <p>A "Cave dos Programadores" é um projeto no mercado dos vinhos e destilados, assumindo-se como um modelo em termos de inovação e desenvolvimento.</p>
+		  <p>Este projeto foi desenvolvido por três alunos da licenciatura em "Tecnologias e Sistemas de Informação para a Web", com o fim de realizar o seu trabalho prático para a disciplina de Tecnologias e Aplicações Web.</p>
+    </article>
+    <footer>
+      <a>&copy Adega dos Programadores by Henrique Moreira / André Lopes / Gonçalo Moreira</a>
+    </footer>
+	</section>
+    <script>
+            function FVinhos() {
+              document.getElementById("Vinhos").classList.toggle("showVinhos");
+            }
+            
+             
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtnVinhos')) {
+                var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('showVinhos')) {
+                    openDropdown.classList.remove('showVinhos');
+                  }
+                }
+              }
+            }
+         
+             
+    </script>            
+	</body>
+</html>		

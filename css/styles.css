@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   background-color:#bfbfbf ;
+  }
+
+
+	header {
+        background-color: #eaeaea;
+        text-align: center;
+        font-size: 35px;
+        color: #ffd966;
+        height:25%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      footer{
+          text-align: center;
+          font-size:15px;
+          padding-top: 10px
+      }
+  
+      article {
+        float: center;
+        width: 100%;
+        background-color: #bfbfbf;
+  
+    }
+  
+    h1 {
+      font-size: 45px;
+      font-weight: bold;
+      display: block;
+      color:  #bd9c69;
+      opacity: 0.8;
+      text-align: center;
+    }
+  
+    p {
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    font-size: 22px;
+  }
+  
+      section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media (max-width: 600px) {
+        nav, article {
+          width: 100%;
+          height: auto;
+        }
+      }
+     /* daqui */
+      .dropbtnVinhos {
+    background-color: #4d0000;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    width: 225px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 2px solid white;
+  
+  
+  }
+  
+  .dropdownVinhos:hover .dropdown-contentVinhos {
+      display: block;
+  }
+  
+  
+  .dropbtnVinhos:hover, .dropbtnVinhos:focus {
+    background-color: 	#990000;
+  }
+  
+  
+  .dropdownVinhos {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .dropdown-contentVinhos {
+    display: none;
+    position: absolute;
+    background-color: 	#990000;
+    width: 225px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-contentVinhos a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown-contentVinhos a:hover {background-color: #cc0000}
+  
+  
+  .showVinhos {display:block;}/* Aqui */
+  
+  
+  
+  .hero-image {
+    background-image: url("caves.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  * {
+    box-sizing: border-box;
+  }
