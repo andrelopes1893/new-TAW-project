@@ -5,77 +5,240 @@
 		<title>Adega dos Programadores</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+      .container {
+        position: relative;
+        width: 450px;
+        margin-top: 90px;
+        margin-left: 40px;
+        margin-right: 30px;
+        margin-bottom: 90px
+      }
+      .image {
+        display: block;
+        width: 450px;
+        height: 450px;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 450px;
+        width: 450px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: 	#ffe6b3;
+      }
+      
+      .container:hover .overlay {
+        opacity: 0.9;
+      }
+      
+      .text {
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      </style>
 	</head>
 	<body>
-	<header>
-	  <table border="1px solid black" width="100%" height = "100%">
-			<tr>
-				<td rowspan="2" width= "18%" style="padding-right: 30px" align="left" >
-					<img src="imagens/logo2.jpg" href="index.html" width="110px" height="150px">
-				</td>
-				<td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
-					<h1> Adega dos Programadores</h1>
-				</td>
-
-				<td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
-					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
-        </td>
-        <td>
-					<input type="button" name="branco" onclick="location.href='brancos.html';" value="Brancos">
-        </td>
-        <td>
-					<input type="button" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
-        </td>
-        <td>
-					<input type="button" name="outro" onclick="location.href='outros.html';" value="Outros">
-        </td>
-        <td>
-					<input type="button" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
-        </td>
-			</tr>
-			
-		</table>
-	</header>
-
-	<section>
-	 
-	  <article width="100%" align=" center">
-    
-      <p align="center">
-        <img src="imagens/caves.jpg" width="501px" height="333px">
-      </p>
-		  <p>A "Adega dos Programadores" é um projeto no mercado dos vinhos e destilados, assumindo-se como um modelo em termos de inovação e desenvolvimento.</p>
-		  <p>Este projeto foi desenvolvido por três alunos da licenciatura em "Tecnologias e Sistemas de Informação para a Web", com o fim de realizar o seu trabalho prático para a disciplina de Tecnologias e Aplicações Web.</p>
-    </article>
-    <footer>
-      <a>&copy Adega dos Programadores by Henrique Moreira & André Lopes & Gonçalo Moreira</a>
-    </footer>
-	</section>
-    <script>
-            function FVinhos() {
-              document.getElementById("Vinhos").classList.toggle("showVinhos");
-            }
+      <header>
+          <table  width="100%" height = "100%">
+            <tr class="border_bottom"></tr>
+              <td rowspan="2" width= "18%" style="padding-right: 30px" align="center" >
+                <img src="imagens/logo2.jpg" href="index.html" width="110px" height="150px">
+              </td>
+              <td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
+                <h1> Adega dos Programadores</h1>
+              </td>
+      
+              <td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
+                <input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px; background-color: #bfbfbf">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width = "20%" style=" border-left:solid #664d00 3px">
+                <input type="button" class="tinto" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="branco" name="branco" onclick="location.href='brancos.html';" value="Brancos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="espumante" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="outro" name="outro" onclick="location.href='outros.html';" value="Outros">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="contactos" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
+              </td>
+            </tr>
             
-             
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtnVinhos')) {
-                var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('showVinhos')) {
-                    openDropdown.classList.remove('showVinhos');
+          </table>
+        </header>
+    </header>
+    <section>
+	 
+        <article width="100%" align=" center">
+            <table align="center">
+              <tr>
+                <td>
+                    <div class="container">
+                        <img src="..//new-TAW-project-master/imagens/guru-2017.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b> Guru 2017 / Wine & Soul</b><br><br>
+                                        Vinho branco extremamente elegante e mineral, com aromas frescos de toranja. Excelente equilíbrio e final muito longo e persistente.<br><br>
+                                          <b>Álcool: </b>12%<br><br>
+                                          <b> Castas:	</b>Gouveio, Viosinho, Rabigato, Códega do Larinho.
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+                <td>
+                      <div class="container">
+                        <img src="..//new-TAW-project-master/imagens/manoella.png"  alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b> Manoella - Branco (2016) / Wine & Soul</b><br><br>
+                                        Após a colheita na segunda semana de setembro, os frutos foram selecionados e derrubados e depois esmagados em uma prensa pneumática. A fermentação subsequente foi realizada em um tanque de aço inoxidável a baixas temperaturas durante 4 semanas e, por fim, envelheceu nas lixas finas por 6 meses.
+<br><br>
+                                          <b>Álcool: </b>12,5%<br><br>
+                                          <b> Castas:	</b>Gouveio, Viosinho, Rabigato, Códega do Larinho
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="..//new-TAW-project-master/imagens/passa-branco-2017.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>Passa Branco (2017) / Quinta do Passadouro</b><br><br>
+                                        Cor amarelo claro, este vinho aromático e crocante dá notas de citrinos e mineralidade. O seu corpo leve e excelente acidez torna-o um par perfeito com peixes<br><br>
+                                          <b>Álcool:</b> 12,5%<br><br>
+                                          <b> Castas: </b>Rabigato e Códega do Larinho.
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                  <td>
+                      <div class="container">
+                          <img src="..//new-TAW-project-master/imagens/meandro-do-vale-meao-branco.jpg" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> Meandro do Vale Meão - Branco (2017) / Quinta do Vale Meão </b><br><br>
+                                          Após ligeiro esmagamento as uvas são sujeitas a um choque térmico, seguido de passagem por uma prensa vertical tradicional. O mosto é transferido para cubas de vinificação de pequena capacidade, com controlo de temperatura. As castas são vinificadas separadamente. O vinho estagia sobre as borras durante sete meses.<br><br>
+                                            <b>Álcool: </b>13%<br><br>
+                                            <b> Castas:	</b>60% Rabitgato e 40% Arinto
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                  <td>
+                        <div class="container">
+                          <img src="..//new-TAW-project-master/imagens/coroa-d-ouro-branco-2017.jpg" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> Coroa d'Ouro Branco (2017) / Poças Júnior</b><br><br>
+                                          Produzido a partir de castas tradicionais da Região Demarcada do Douro, onde nasce o Vinho do Porto. Uvas cortadas à mão e transportadas em caixas de 30 kg. Fermentação a temperatura controlada. Em cubas de aço inox até ao engarrafamento. Amarelo palha suave. Frutado com notas tropicais. Fresco. com acidez equilibrada e persistente. Ideal como vinho de aperitivo. acompanha igualmente bem queijos leves e pratos delicados de aves. peixe ou marisco. Servir à temperatura de 14°C.<br><br>
+                                            <b>Álcool: </b>12,98%<br><br>
+                                            <b> Castas:	</b> Malvasia Fina, Códega; Rabigato, Viosinho, Moscatel
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                  <td>
+                      <div class="container">
+                          <img src="..//new-TAW-project-master/imagens/poeira-branco-2016.jpg" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> Poeira Branco 2016 / Jorge Nobre Moreira.</b><br><br>
+                                          Os aromas da variedade estão bem em evidência no aroma aqui com notas verdes e um tom cítrico muito agradável ao nariz. Muito elegante na boca, tem um monte de variedade de caracteres.<br><br>
+                                            <b>Álcool:</b> 13,5%<br><br>
+                                            <b> Castas:	</b>Alvarinho
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+            </table>
+      </article>
+      <footer>
+        <a>&copy Adega dos Programadores by Henrique Moreira & André Lopes & Gonçalo Moreira</a>
+      </footer>
+    </section>
+      <script>
+              function FVinhos() {
+                document.getElementById("Vinhos").classList.toggle("showVinhos");
+              }
+              
+               
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtnVinhos')) {
+                  var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('showVinhos')) {
+                      openDropdown.classList.remove('showVinhos');
+                    }
                   }
                 }
               }
-            }
-         
-             
-    </script>            
-	</body>
-</html>		
+           
+               
+      </script>            
+    </body>
+  </html>		

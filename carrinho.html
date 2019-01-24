@@ -8,9 +8,9 @@
 	</head>
 	<body>
 	<header>
-	  <table border="1px solid black" width="100%" height = "100%">
-			<tr>
-				<td rowspan="2" width= "18%" style="padding-right: 30px" align="left" >
+	  <table  width="100%" height = "100%">
+			<tr class="border_bottom"></tr>
+				<td rowspan="2" width= "18%" style="padding-right: 30px" align="center" >
 					<img src="imagens/logo2.jpg" href="index.html" width="110px" height="150px">
 				</td>
 				<td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
@@ -18,24 +18,24 @@
 				</td>
 
 				<td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
-					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px">
+					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px; background-color: #bfbfbf">
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<input type="button" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
+				<td align="center" width = "20%" style=" border-left:solid #664d00 3px">
+					<input type="button" class="tinto" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
         </td>
-        <td>
-					<input type="button" name="branco" onclick="location.href='brancos.html';" value="Brancos">
+        <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+					<input type="button" class="branco" name="branco" onclick="location.href='brancos.html';" value="Brancos">
         </td>
-        <td>
-					<input type="button" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
+        <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+					<input type="button" class="espumante" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
         </td>
-        <td>
-					<input type="button" name="outro" onclick="location.href='outros.html';" value="Outros">
+        <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+					<input type="button" class="outro" name="outro" onclick="location.href='outros.html';" value="Outros">
         </td>
-        <td>
-					<input type="button" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
+        <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+					<input type="button" class="contactos" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
         </td>
 			</tr>
 			
@@ -45,24 +45,24 @@
 	<section>
 	 
 	  <article width="100%" align=" center">
-      <table border="1px solid black" width="65%" height ="60%" align="center" style="margin-top: 70px">
+      <table style="border:3px solid #bd9c69; margin-top: 70px; background-color: #ffe699" width="65%" height ="60%" align="center" >
               <tr>
                 <td rowspan="2" width= "65%" align="center"> 
-                    <form name="carinho" action="index.html" method="GET" >
-                      <input type="text" name="nome" placeholder="Nome..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="email" placeholder="Email..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="tele" placeholder="Telemóvel..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="morada" placeholder="Morada..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="postal" placeholder="Codigo Postal..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="submit" name="sub" value="Finalizar Compra" onsubmit="return block();">
+                    <form name="carinho" action="index.html" method="GET"  onsubmit="return block();">
+                      <input type="text" name="nome" id="nome"placeholder="Nome..."  required><br><br><br>
+                      <input type="text" name="email" id="email" placeholder="Email..."  required><br><br><br>
+                      <input type="text" name="tele" id="tele" placeholder="Telemóvel..."  required><br><br><br>
+                      <input type="text" name="morada" id="morada" placeholder="Morada..."  required><br><br><br>
+                      <input type="text" name="postal" id="postal" placeholder="Codigo Postal..."  required><br><br><br>
+                      <input type="submit" name="sub" value="Finalizar Compra">
                     </form>
                 </td>
-                <td>
+                <td style="padding-right: 20px">
                   <img src="imagens/IPP.jpg" width="250px" height="200px" class="center">
                 </td>
               </tr>
               <tr>
-                <td>
+                <td style="padding-right: 20px">
                   <img src="imagens/esmad.JPG" width="250px" height="200px" class="center">
                 </td>
               </tr>
@@ -76,11 +76,18 @@
             function FVinhos() {
               document.getElementById("Vinhos").classList.toggle("showVinhos");
             }
-            function block(){
-                return false;
-                window.open("file:///E:/Taw/new-TAW-project/index.html","_self")
-            }
-             
+          
+             function block(){
+              alert("Encomenda enviada com sucesso!");
+              document.getElementById('nome').value = "";
+              document.getElementById('email').value = "";
+              document.getElementById('tele').value = "";
+              document.getElementById('morada').value = "";
+              document.getElementById('postal').value = "";
+               return false;
+               
+           }
+           
             window.onclick = function(event) {
               if (!event.target.matches('.dropbtnVinhos')) {
                 var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
