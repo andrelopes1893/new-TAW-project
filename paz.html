@@ -4,6 +4,8 @@
 		<title>Adega dos Programadores</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    
 	</head>
 	<body>
  <header>
@@ -46,20 +48,20 @@
 	  <article width="100%" align=" center" style="margin-top:80px">
     
         <table  style="border:3px solid #bd9c69; margin-top: 70px; background-color: #ffe699" width="75%" align="center" height="500px" >
-            <tr height="65%">
-                <td  width="35%" style="text-align: center">
-                    <img src="Imagens/pintas.jpg" height="70%">
+            <tr height="65%" >
+                <td  width="35%" style="text-align: center;">
+                    <img style=" margin-top: 40px; margin-left:20px" src="Imagens/pintas.jpg" height="70%">
                 </td>
                 <td rowspan="3">
                    
                 </td>
-                <td  width="55%" rowspan="2" style="text-align: center">
-                   <b> Produtor:  Wine&Soul</b><br><br>
+                <td  width="55%" rowspan="2" style="text-align: center ;" >
+                 <p style="margin-right: 40px">  <b> Produtor:  Wine&Soul</b><br><br>
         Espelho da vinha de mais de 80 anos que lhe dá origem, este vinho é composto por um field blend excepcional de mais de 30 castas.
         Depois de uma vindima cuidadosamente planeada, a fermentação decorre em lagares de granito com pisa a pé e posterior estágio em barricas maioritariamente novas de carvalho francês.
         Complexidade e elegância, enriquecidas pelo persistente aroma a amora e chocolate, são as principais características que definem este grandioso vinho, baptizado em honra do carismático Pointer da família Serôdio Borges<br><br>
                     <b>Álcool: 14,5%</b><br><br>
-                    <b> Castas:	Vinhas Velhas</b>
+                    <b> Castas:	Vinhas Velhas</b></p>
                 </td>
             </tr>
             <tr> 
@@ -73,23 +75,20 @@
                     <table width="100%" height="100%">
                         <tr>
                             <td style="text-align: center">
-                                Classificação: 18/20
+                               <p>Classificação: 18/20</p> 
                             </td>
-                            <td style="text-align: center">
-                                74,95 €
+                            <td style="text-align: center; ">
+                              <p style=" color:black"><b>74,95 €</b></p>
                             </td>
                         </tr>
                     </table>
                 </td>
         
-                <td  >
-                   <table>
-                       <tr>
+                <td>
+                   <table align="right"style ="margin-right: 70px;">
+                       <tr colspan="2">
                            <td>
-        
-                           </td>
-                           <td>
-                               
+                               <button onclick="carrinho()" class="final">Finalizar Compra</button>
                            </td>
                        </tr>
                    </table>
@@ -119,7 +118,9 @@
                 }
               }
             }
-         
+            function carrinho(){
+                    window.open("carrinho.html","_self")
+                   }
              
     </script>            
 	</body>
