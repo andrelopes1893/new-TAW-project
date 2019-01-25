@@ -1,0 +1,128 @@
+
+<html>
+	<head>
+        <html>
+		<title>Adega dos Programadores</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+ <header>
+          <table  width="100%" height = "100%">
+            <tr class="border_bottom"></tr>
+              <td rowspan="2" width= "18%" style="padding-right: 30px" align="center" >
+               <a href="index.html"> <img src="imagens/logo2.jpg"  width="110px" height="150px"></a>
+              </td>
+              <td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
+                <h1> Adega dos Programadores</h1>
+              </td>
+      
+              <td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
+                <input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px; background-color: #bfbfbf">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width = "20%" style=" border-left:solid #664d00 3px">
+                <input type="button" class="tinto" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="branco" name="branco" onclick="location.href='brancos.html';" value="Brancos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="espumante" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="outro" name="outro" onclick="location.href='outros.html';" value="Outros">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="contactos" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
+              </td>
+            </tr>
+            
+          </table>
+       </header>
+
+	<section>
+	 
+	  <article width="100%" align=" center" style="margin-top:80px">
+    
+        <table  style="border:3px solid #bd9c69; margin-top: 70px; background-color: #ffe699" width="75%" align="center" height="500px" >
+            <tr height="65%">
+                <td  width="35%" style="text-align: center">
+                    <img src="Imagens/pintas.jpg" height="70%">
+                </td>
+                <td rowspan="3">
+                   
+                </td>
+                <td  width="55%" rowspan="2" style="text-align: center">
+                   <b> Produtor:  Wine&Soul</b><br><br>
+        Espelho da vinha de mais de 80 anos que lhe dá origem, este vinho é composto por um field blend excepcional de mais de 30 castas.
+        Depois de uma vindima cuidadosamente planeada, a fermentação decorre em lagares de granito com pisa a pé e posterior estágio em barricas maioritariamente novas de carvalho francês.
+        Complexidade e elegância, enriquecidas pelo persistente aroma a amora e chocolate, são as principais características que definem este grandioso vinho, baptizado em honra do carismático Pointer da família Serôdio Borges<br><br>
+                    <b>Álcool: 14,5%</b><br><br>
+                    <b> Castas:	Vinhas Velhas</b>
+                </td>
+            </tr>
+            <tr> 
+                <td colspan="2">
+        
+                </td>
+              
+            </tr>
+            <tr height="20%">
+                <td>
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td style="text-align: center">
+                                Classificação: 18/20
+                            </td>
+                            <td style="text-align: center">
+                                74,95 €
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+        
+                <td  >
+                   <table>
+                       <tr>
+                           <td>
+        
+                           </td>
+                           <td>
+                               
+                           </td>
+                       </tr>
+                   </table>
+                </td>
+            </tr>
+        </table>
+      </article>
+      <footer>
+        <a>&copy Adega dos Programadores by Henrique Moreira & André Lopes & Gonçalo Moreira</a>
+      </footer>
+	</section>
+    <script>
+            function FVinhos() {
+              document.getElementById("Vinhos").classList.toggle("showVinhos");
+            }
+            
+             
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtnVinhos')) {
+                var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('showVinhos')) {
+                    openDropdown.classList.remove('showVinhos');
+                  }
+                }
+              }
+            }
+         
+             
+    </script>            
+	</body>
+</html>		
+
