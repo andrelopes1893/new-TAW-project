@@ -127,3 +127,27 @@ body {
     margin-right: auto;
     width: 100%;
   }
+  input[type="text"] {
+    border-radius: 4em;
+     width: 450px;
+      height: 30px; 
+      padding-left: 10px;
+      background-color: #bfbfbf;
+      border-width: 3px;
+      border-color: #bd9c69;
+      
+  }
+  input[type=submit] {
+    width: 140px;
+    background-color: #bd9c69;
+    color: black;
+    padding: 20px 20px;
+    border-color: #bd9c69;
+    border-width: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #d0b895;
+  }

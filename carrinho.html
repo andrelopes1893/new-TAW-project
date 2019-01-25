@@ -18,7 +18,7 @@
 				</td>
 
 				<td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
-					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px">
+					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px; background-color: #bfbfbf">
 				</td>
 			</tr>
 			<tr>
@@ -48,13 +48,13 @@
       <table border="1px solid black" width="65%" height ="60%" align="center" style="margin-top: 70px">
               <tr>
                 <td rowspan="2" width= "65%" align="center"> 
-                    <form name="carinho" action="index.html" method="GET" >
-                      <input type="text" name="nome" placeholder="Nome..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="email" placeholder="Email..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="tele" placeholder="Telemóvel..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="morada" placeholder="Morada..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="text" name="postal" placeholder="Codigo Postal..." style="border-radius: 4em; width: 350px; height: 30px; padding-left: 10px;"><br><br><br>
-                      <input type="submit" name="sub" value="Finalizar Compra" onsubmit="return block();">
+                    <form name="carinho" action="index.html" method="GET"  onsubmit="return block();">
+                      <input type="text" name="nome" id="nome"placeholder="Nome..."  required><br><br><br>
+                      <input type="text" name="email" id="email" placeholder="Email..."  required><br><br><br>
+                      <input type="text" name="tele" id="tele" placeholder="Telemóvel..."  required><br><br><br>
+                      <input type="text" name="morada" id="morada" placeholder="Morada..."  required><br><br><br>
+                      <input type="text" name="postal" id="postal" placeholder="Codigo Postal..."  required><br><br><br>
+                      <input type="submit" name="sub" value="Finalizar Compra">
                     </form>
                 </td>
                 <td>
@@ -76,11 +76,18 @@
             function FVinhos() {
               document.getElementById("Vinhos").classList.toggle("showVinhos");
             }
-            function block(){
-                return false;
-                window.open("file:///E:/Taw/new-TAW-project/index.html","_self")
-            }
-             
+          
+             function block(){
+              alert("Encomenda enviada com sucesso!");
+              document.getElementById('nome').value = "";
+              document.getElementById('email').value = "";
+              document.getElementById('tele').value = "";
+              document.getElementById('morada').value = "";
+              document.getElementById('postal').value = "";
+               return false;
+               
+           }
+           
             window.onclick = function(event) {
               if (!event.target.matches('.dropbtnVinhos')) {
                 var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
