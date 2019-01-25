@@ -47,6 +47,12 @@
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
       }
+
+      .button{
+        border-radius: 4em; 
+        background-color:#e6ffcc;
+        width: 80px
+      }
       </style>
 	</head>
 	<body>
@@ -101,6 +107,7 @@
                                             Produzido a partir da casta autóctone da Áustria, a Grüner Veltliner, importada diretamente para o Douro Superior para produzir, pela primeira vez, um espumante com inspiração austríaca em solo português. O resultado é um vinho com perfil distinto, marcado pela explosão aromática, acidez equilibrada e boa estrutura, que conferem ao vinho grande precisão e dinamismo.<br><br>
                                             <b>Preço: 31,70€</b><br> 
                                             <b>Álcool: </b>13%<br><br>
+                                            <button class="button" onclick="conceito()">Comprar</button>
 
                                           </td>
                                     </tr>
@@ -122,6 +129,7 @@
                                             Este vinho resulta, exclusivamente, de uvas de produção própria sujeitas a rigorosos critérios de selecção que visam garantir um produto de elevada qualidade. Aroma focado na casta, fruto cítrico, leve pêssego, bastante mineral. Sabor a fruta madura envolve a acidez muito equilibrada, com um final cheio e prolongado. É um vinho que, pode ser consumido jovem, mas a sua potencialidade é realçada ao fim de algum tempo em garrafa, podendo ser consumido dois a três anos após o engarrafamento.<br><br>
                                             <b>Preço: 15,80€</b><br> 
                                             <b>Álcool: </b>12,5%<br><br>
+                                            <button class="button" onclick="canhotos()">Comprar</button>
                                           </td>
                                     </tr>
                                   </table>
@@ -142,6 +150,7 @@
                                             Criado com uvas das castas Maria Gomes (95%) e Sercialinho (5%) fermentadas separadamente em cubas de inox com controlo de temperatura, durante 2 semanas.<br><br>
                                             <b>Preço: 8,55€</b><br>   
                                             <b>Álcool:</b> 12,5%<br><br>
+                                            <button class="button" onclick="luis()">Comprar</button>
 
                                           </td>
                                     </tr>
@@ -166,6 +175,7 @@
                                               Esta é uma edição especial e comemorativa e cuja produção foi limitada a 1917 garrafas numeradas. A garrafa nº 1 foi oferecida, em mão própria, ao Papa Francisco no Vaticano. A iniciativa é da Comissão Vitivinícola da Bairrada (CVB) e da Associação Rota da Bairrada (ARB) e contou com o apoio dos produtores da região, desafiados criar um único espumante capaz de reunir o melhor da Bairrada. <br><br>
                                               <b>Preço: 65,00€</b><br>   
                                               <b>Álcool: </b>13,5%<br><br>
+                                              <button class="button" onclick="fatima()">Comprar</button>
 
                                             </td>
                                       </tr>
@@ -187,6 +197,7 @@
                                               O amadurecimento foi muito lento. Durante muito tempo, o vinho foi dominado em grande parte apenas pelo amadurecimento da fruta. Não foi até 2015 que a abrangência e a harmonia de sua primeira intenção foram finalmente reveladas. Dom Pérignon é superlativo, luminoso e glorioso.<br><br>
                                               <b>Preço: 175,00€</b><br>   
                                               <b>Álcool: </b>12,5%<br><br>
+                                              <button class="button" onclick="periBrut()">Comprar</button>
                                             </td>
                                       </tr>
                                     </table>
@@ -207,6 +218,7 @@
                                               Dom Pérignon Rosé é uma homenagem ao Pinot noir, a uva que predomina na composição deste champanhe único, que também é feito com uma menor percentagem de Chardonnay. Destaca-se a mineralidade do iodo obtida graças a uma longa maturação (10 anos), característica do lado "escuro" de Dom Pérignon, tão complexo e intrigante. A safra de 2005 foi marcada por contrastes climatológicos, resultando em uma produção menor que a usual, mas de excepcional qualidade, com maturidade aromática sem precedentes.<br><br>
                                               <b>Preço: 299,99€</b><br>   
                                               <b>Álcool:</b> 12,5%<br><br>
+                                              <button class="button" onclick="periRose()">Comprar</button>
 
                                             </td>
                                       </tr>
@@ -242,7 +254,25 @@
                     }
                   }
                
-                   
+                  function canhotos(){
+                    window.open("canhotos.html","_self")
+                   }
+              function periBrut(){
+                    window.open("periBrut.html","_self")
+                   }
+              function periRose(){
+                    window.open("periRose.html","_self")
+                   }
+              function luis(){
+                    window.open("luis.html","_self")
+                   }
+              function fatima(){
+                    window.open("fatima.html","_self")
+                   }
+
+              function conceito(){
+                    window.open("conceito.html","_self")
+                   }
           </script>            
         </body>
       </html>		
