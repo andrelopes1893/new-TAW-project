@@ -1,81 +1,246 @@
-
 <html>
 	<head>
         <html>
 		<title>Adega dos Programadores</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+      .container {
+        position: relative;
+        width: 450px;
+        margin-top: 90px;
+        margin-left: 40px;
+        margin-right: 30px;
+        margin-bottom: 90px
+      }
+      .image {
+        display: block;
+        width: 450px;
+        height: 450px;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 450px;
+        width: 450px;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #d47d7d;
+      }
+      
+      .container:hover .overlay {
+        opacity: 0.9;
+    }
+      
+      .text {
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      </style>
 	</head>
 	<body>
-	<header>
-	  <table border="1px solid black" width="100%" height = "100%">
-			<tr>
-				<td rowspan="2" width= "18%" style="padding-right: 30px" align="left" >
-					<img src="imagens/logo2.jpg" href="index.html" width="110px" height="150px">
-				</td>
-				<td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
-					<h1> Adega dos Programadores</h1>
-				</td>
-
-				<td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
-					<input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
-        </td>
-        <td>
-					<input type="button" name="branco" onclick="location.href='brancos.html';" value="Brancos">
-        </td>
-        <td>
-					<input type="button" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
-        </td>
-        <td>
-					<input type="button" name="outro" onclick="location.href='outros.html';" value="Outros">
-        </td>
-        <td>
-					<input type="button" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
-        </td>
-			</tr>
-			
-		</table>
-	</header>
-
-	<section>
-	 
-	  <article width="100%" align=" center">
-    
-      <p align="center">
-        <img src="imagens/caves.jpg" width="501px" height="333px">
-      </p>
-		  <p>A "Adega dos Programadores" é um projeto no mercado dos vinhos e destilados, assumindo-se como um modelo em termos de inovação e desenvolvimento.</p>
-		  <p>Este projeto foi desenvolvido por três alunos da licenciatura em "Tecnologias e Sistemas de Informação para a Web", com o fim de realizar o seu trabalho prático para a disciplina de Tecnologias e Aplicações Web.</p>
-    </article>
-    <footer>
-      <a>&copy Adega dos Programadores by Henrique Moreira & André Lopes & Gonçalo Moreira</a>
-    </footer>
-	</section>
-    <script>
-            function FVinhos() {
-              document.getElementById("Vinhos").classList.toggle("showVinhos");
-            }
+      <header>
+          <table  width="100%" height = "100%">
+            <tr class="border_bottom"></tr>
+              <td rowspan="2" width= "18%" style="padding-right: 30px" align="center" >
+                <a href="index.html"> <img src="imagens/logo2.jpg"  width="110px" height="150px"></a>
+              </td>
+              <td width= "54%" style="padding-right: 30px" align="right" colspan="3" color = "#ffd966">  
+                <h1>                   Adega dos Programadores</h1>
+              </td>
+      
+              <td width = "28%"  style ="color: white;" align="right" height="65% " colspan="2">
+                <input placeholder="Pesquisa..." type="text" name="pesquisa" id="pesquisa" style="border-radius:2em; padding-left:10px; width:350px; height: 30px; background-color: #bfbfbf">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width = "20%" style=" border-left:solid #664d00 3px">
+                <input type="button" class="tinto" name="tinto" onclick="location.href='tintos.html';" value="Tintos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="branco" name="branco" onclick="location.href='brancos.html';" value="Brancos">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="espumante" name="espumante" onclick="location.href='espumantes.html';" value="Espumantes">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="outro" name="outro" onclick="location.href='outros.html';" value="Outros">
+              </td>
+              <td align="center" width = "20%" style="border-left:solid #664d00 3px">
+                <input type="button" class="contactos" name="contactos" onclick="location.href='contactos.html';" value="Contactos">
+              </td>
+            </tr>
             
-             
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtnVinhos')) {
-                var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('showVinhos')) {
-                    openDropdown.classList.remove('showVinhos');
+          </table>
+        </header>
+    </header>
+    <section>
+	 
+        <article width="100%" align=" center">
+            <table align="center">
+              <tr>
+                <td>
+                    <div class="container">
+                        <img src="..//new-TAW-project/imagens/velhotescalem.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b> Velhotes/ Calem</b><br><br>
+                                        O Cálem Fine Tawny é um dos vinhos do Porto mais popular em Portugal. Envelhece entre 3 a 4 anos em cascos de carvalho. De cor castanha-aloirada, apresenta aromas a frutos secos e madeira. Na boca é aveludado, frutado e equilibrado. Uma marca que rivaliza em popularidade com a casa-mãe Cálem, o vinho Velhotes goza de uma reputação sem preço: é um vinho que não só se compra, como também se herda. A preferência pelo Velhotes é transmitida de geração em geração, e as características próprias deste vinho acabam por educar o palato a procurar sempre aquele travo familiar.<br><br>
+                                          <b>Preço: 6,45€</b><br>   
+                                          <b>Álcool: </b>19,5%<br><br>
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+                <td>
+                      <div class="container">
+                        <img src="..//new-TAW-project/imagens/pocas-vintage-port-2000.jpg"  alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b> 2000 Poças Vintage Porto</b><br><br>
+                                        Tudo começou em 1918, quando Manoel Domingues Poças Júnior, nascido no centro da azáfama do Vinho do Porto, decidiu fundar o seu próprio negócio. Era 15 de agosto, poucos meses antes do Armistício. Manoel Poças tinha 30 anos e alguma experiência de trabalho na área. Com o seu tio, fundou uma empresa para vender brandies a grandes produtores de Vinho do Porto. A família Poças veio a partilhar a sua paixão pelo vinho, combinando o respeito pela tradição com a mente aberta à inovação trazida pelas novas gerações.<br><br>
+                                          <b>Preço: 70,15</b><br> 
+                                          <b>Álcool: </b>20%<br><br>
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <img src="..//new-TAW-project/imagens/jackdaniels.jpg" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <b>Jack Daniel's Black Label Old No.7 Whisky</b><br><br>
+                                        Boa concentração, aroma focado na fruta madura e nas notas vegetais secas,
+                                        Mellowed gota a gota através de 10 pés de carvão maple de açúcar, em seguida, amadureceu em barris artesanais de nossa própria criação. Só está pronto quando nossos provadores dizem que sim. Pelo seu aroma. E, claro, pela forma como sabe. Carvão Mellowed, amadurecido em nossos próprios barris artesanais, equilíbrio de sabor doce e ocoy. No nariz tem um caráter equilibrado, doce, ocoy, corpo médio. O sabor concentra-se em meio palato, equilíbrio de carvalho e carvalho<br><br>
+                                          <b>Preço: 20,80€</b><br> 
+                                          <b>Álcool:</b> 40%<br><br>
+                                      </td>
+                                </tr>
+                              </table>
+                              
+                          </div>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                  <td>
+                      <div class="container">
+                          <img src="..//new-TAW-project/imagens/beirao1.png" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> Licor Beirão </b><br><br>
+                                          O que é que uma farmácia, um caixeiro-viajante vendedor de vinho do Porto, a filha de um farmacêutico da Lousã e o Licor de Portugal têm em comum? Têm tudo. Têm um licor inigualável. É de facto uma história que podia servir para o guião de um filme. No ano de 1940 nasce a J. Carranca Redondo Lda., a empresa que produz o Licor Beirão. Mas muito antes disso, já ele cá andava. É por tudo isto que hoje em dia, sentado a uma mesa ou em pé num bar, há sempre alguém a pedir Licor Beirão.
+                                          É por tudo isto que é o Licor de Portugal. <br><br>
+                                          <b>Preço: 10,20€</b><br> 
+                                          <b>Álcool: </b>20%<br><br>
+                                            <b> Destilação de produtos naturais:	</b> Eucalipto, canela, alecrim.
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                  <td>
+                        <div class="container">
+                          <img src="..//new-TAW-project/imagens/c-r-f-aguardente-vinica-velha-reserva-extra.jpg" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> CR&F Aguardente Extra Reserva</b><br><br>
+                                          Uma Aguardente tão especial que só podia ser protegida por uma garrafa com produção semi-artesanal e numerada, que confere a cada peça uma identidade própria e distinta. A base deste lote "extra" é constituída por aguardentes seleccionadas entre as melhores de origem nacional. Este lote foi conservado ao longo de mais de 30 anos e, evoluí ao sabor do tempo, ganhou um toque de idade e valor incomparável, a que se alia um perfume indescritível enriquecido e conservado em contacto com a madeira.<br><br>
+                                            <b>Preço: 36,50€</b><br>  
+                                            <b>Álcool: </b>40%<br><br>
+                                            <b> Produção:	</b> Semi-artesanal e numerada
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                  <td>
+                      <div class="container">
+                          <img src="..//new-TAW-project/imagens/grey.jpg" alt="Avatar" class="image">
+                          <div class="overlay">
+                            <div class="text">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <b> Grey Goose Vodka </b><br><br>
+                                          A Grey Goose é uma marca de vodka produzida na França. Foi criado nos anos 90 por Sidney Frank, que o vendeu em 2004 para a Bacardi. O Maître de Chai para Grey Goose é François Thibault, que desenvolveu a receita original da vodka em Cognac, na França.<br><br>
+                                          <b>Preço: 39,90€</b><br>  
+                                          <b>Álcool:</b> 40%<br><br>
+                                        </td>
+                                  </tr>
+                                </table>
+                                
+                            </div>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+            </table>
+           </article>
+      <footer>
+        <a>&copy Adega dos Programadores by Henrique Moreira & André Lopes & Gonçalo Moreira</a>
+      </footer>
+    </section>
+      <script>
+              function FVinhos() {
+                document.getElementById("Vinhos").classList.toggle("showVinhos");
+              }
+              
+               
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtnVinhos')) {
+                  var dropdowns2 = document.getElementsByClassName("dropdown-contentVinhos");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('showVinhos')) {
+                      openDropdown.classList.remove('showVinhos');
+                    }
                   }
                 }
               }
-            }
-         
-             
-    </script>            
-	</body>
-</html>		
+           
+               
+      </script>            
+    </body>
+  </html>
