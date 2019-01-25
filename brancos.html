@@ -12,7 +12,9 @@
         margin-top: 90px;
         margin-left: 40px;
         margin-right: 30px;
+        background-color: white;
         margin-bottom: 90px
+
       }
       .image {
         display: block;
@@ -45,6 +47,11 @@
         left: 40%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+      }
+      .button{
+        border-radius: 4em; 
+        background-color:#ffd480;
+        width: 80px
       }
       </style>
 	</head>
@@ -119,11 +126,12 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <b> Manoella - Branco (2016) / Wine & Soul</b><br><br>
+                                        <b> Manoella - Branco (2016) / Wine & Soul</b><br>
                                         Após a colheita na segunda semana de setembro, os frutos foram selecionados e derrubados e depois esmagados em uma prensa pneumática. A fermentação subsequente foi realizada em um tanque de aço inoxidável a baixas temperaturas durante 4 semanas e, por fim, envelheceu nas lixas finas por 6 meses.<br><br>
                                           <b>Preço: 14,65€</b><br> 
-                                          <b>Álcool: </b>12,5%<br><br>
-                                          <b> Castas:	</b>Gouveio, Viosinho, Rabigato, Códega do Larinho
+                                          <b>Álcool: </b>12,5%
+                                          <b> Castas:	</b>Gouveio, Viosinho, Rabigato, Códega do Larinho<br><br>
+                                          <button class="button" onclick="manoella()">Comprar</button>
                                       </td>
                                 </tr>
                               </table>
@@ -140,12 +148,13 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <b>Passa Branco (2017) / Quinta do Passadouro</b><br><br>
+                                        <b>Passa Branco (2017) / Quinta do Passadouro</b><br>
                                         Cor amarelo claro, este vinho aromático e crocante dá notas de citrinos e mineralidade. O seu corpo leve e excelente acidez torna-o um par perfeito com peixes<br><br>
                                           <b>Preço: 7,85€</b><br> 
 
-                                          <b>Álcool:</b> 12,5%<br><br>
-                                          <b> Castas: </b>Rabigato e Códega do Larinho.
+                                          <b>Álcool:</b> 12,5%
+                                          <b> Castas: </b>Rabigato e Códega do Larinho.<br><br>
+                                          <button class="button" onclick="passa()">Comprar</button>
                                       </td>
                                 </tr>
                               </table>
@@ -167,8 +176,9 @@
                                           <b> Meandro do Vale Meão - Branco (2017) / Quinta do Vale Meão </b><br><br>
                                           Após ligeiro esmagamento as uvas são sujeitas a um choque térmico, seguido de passagem por uma prensa vertical tradicional. O mosto é transferido para cubas de vinificação de pequena capacidade, com controlo de temperatura. As castas são vinificadas separadamente. O vinho estagia sobre as borras durante sete meses.<br><br>
                                             <b>Preço: 12,15€</b><br>  
-                                            <b>Álcool: </b>13%<br><br>
-                                            <b> Castas:	</b>60% Rabitgato e 40% Arinto
+                                            <b>Álcool: </b>13%
+                                            <b> Castas:	</b>60% Rabitgato e 40% Arinto<br><br>
+                                            <button class="button" onclick="meandro()">Comprar</button>
                                         </td>
                                   </tr>
                                 </table>
@@ -185,11 +195,12 @@
                               <table>
                                   <tr>
                                       <td>
-                                          <b> Coroa d'Ouro Branco (2017) / Poças Júnior</b><br><br>
+                                          <b> Coroa d'Ouro Branco (2017) / Poças Júnior</b><br>
                                           Produzido a partir de castas tradicionais da Região Demarcada do Douro, onde nasce o Vinho do Porto. Uvas cortadas à mão e transportadas em caixas de 30 kg. Fermentação a temperatura controlada. Em cubas de aço inox até ao engarrafamento. Amarelo palha suave. Frutado com notas tropicais. Fresco. com acidez equilibrada e persistente. Ideal como vinho de aperitivo. acompanha igualmente bem queijos leves e pratos delicados de aves, peixe ou marisco.<br><br>
                                             <b>Preço: 5,55€</b><br> 
-                                            <b>Álcool: </b>12,98%<br><br>
-                                            <b> Castas:	</b> Malvasia Fina, Códega; Rabigato, Viosinho, Moscatel
+                                            <b>Álcool: </b>12,98%
+                                            <b> Castas:	</b> Malvasia Fina, Códega; Rabigato, Viosinho, Moscatel<br><br>
+                                            <button class="button" onclick="ouro()">Comprar</button>
                                         </td>
                                   </tr>
                                 </table>
@@ -206,11 +217,12 @@
                               <table>
                                   <tr>
                                       <td>
-                                          <b> Poeira Branco 2016 / Jorge Nobre Moreira.</b><br><br>
+                                          <b> Poeira Branco 2016 / Jorge Nobre Moreira.</b><br>
                                           Os aromas da variedade estão bem em evidência no aroma aqui com notas verdes e um tom cítrico muito agradável ao nariz. Muito elegante na boca, tem um monte de variedade de caracteres.<br><br>
                                             <b>Preço: 29,40€</b><br> 
-                                            <b>Álcool:</b> 13,5%<br><br>
-                                            <b> Castas:	</b>Alvarinho
+                                            <b>Álcool:</b> 13,5%
+                                            <b> Castas:	</b>Alvarinho<br><br>
+                                            <button class="button" onclick="poeira()">Comprar</button>
                                         </td>
                                   </tr>
                                 </table>
@@ -247,21 +259,21 @@
               function guru(){
                     window.open("guru.html","_self")
                    }
-              function pintas(){
-                    window.open("pintas.html","_self")
+              function manoella(){
+                    window.open("manoella.html","_self")
                    }
-              function pintas(){
-                    window.open("pintas.html","_self")
+              function meandro(){
+                    window.open("meandro.html","_self")
                    }
-              function pintas(){
-                    window.open("pintas.html","_self")
+              function poeira(){
+                    window.open("poeirab.html","_self")
                    }
-              function pintas(){
-                    window.open("pintas.html","_self")
+              function passa(){
+                    window.open("passa.html","_self")
                    }
 
-              function pintas(){
-                    window.open("pintas.html","_self")
+              function ouro(){
+                    window.open("ouro.html","_self")
                    }
                
       </script>            
